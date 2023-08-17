@@ -10,9 +10,15 @@ const elementRoot = document.getElementById("root");
 const root = ReactDOM.createRoot(elementRoot);
 
 //5  Show the componanet on the screen
-function App() {
-	let message = {}; // uncaught Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
-	return <h1>{message}</h1>; // this is JSX element, curly braces means we are about to add expression
+function PrintVariables() {
+	let message = "Hi "; // uncaught Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
+	let name = "Rahul";
+	return (
+		<h1>
+			{message}
+			{name}
+		</h1>
+	); // this is JSX element, curly braces means we are about to add expression
 }
 
-root.render(<App />);
+root.render(<PrintVariables />);
