@@ -11,8 +11,11 @@ const root = ReactDOM.createRoot(elementRoot);
 
 //5  Show the componanet on the screen
 function App() {
-	<h4>this is an elelemnt</h4>; //this is not going to work
-	return <h1>Hi There!</h1>; // this is JSX element
+	let message = "Bye There!";
+	if (Math.random() > 0.5) {
+		message = "Hi There!";
+	}
+	return <h1>{message}</h1>; // this is JSX element, curly braces means we are about to add expression
 }
 
 root.render(<App />);
