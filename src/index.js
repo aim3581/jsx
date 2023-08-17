@@ -21,4 +21,23 @@ function PrintVariables() {
 	); // this is JSX element, curly braces means we are about to add expression
 }
 
-root.render(<PrintVariables />);
+function InputProps() {
+	const inputType = "number";
+	const minValue = 5;
+	const maxValue = 10;
+	return (
+		<div>
+			<input
+				type={inputType}
+				min={minValue}
+				max={maxValue}
+				style={{ border: "2px solid red" }}
+			/>
+			<hr />
+			{/* props follow camelcase syntax, maxlength is refered as maxLength in JSX */}
+			<textarea autoFocus maxLength={25} />
+		</div>
+	); //
+}
+
+root.render(<InputProps />);
