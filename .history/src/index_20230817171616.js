@@ -1,18 +1,9 @@
-// Import React and ReactDOM lib
+// Import react and react dom lib
 import React from "react"; // what a component is and how multiple comp work together
 import ReactDOM from "react-dom/client"; // how to get a component to show up in the browser
 
 //2 Get a reference to the div with id root
 
-const elementRoot = document.getElementById("root");
-
 //3 tell React to take control of that elem
-const root = ReactDOM.createRoot(elementRoot);
 
 //5  Show the componanet on the screen
-function App() {
-	<h4>this is an elelemnt</h4>; //this is not going to work
-	return <h1>Hi There!</h1>; // this is JSX element
-}
-
-root.render(<App />);

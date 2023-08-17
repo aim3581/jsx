@@ -10,9 +10,3 @@ const elementRoot = document.getElementById("root");
 const root = ReactDOM.createRoot(elementRoot);
 
 //5  Show the componanet on the screen
-function App() {
-	<h4>this is an elelemnt</h4>; //this is not going to work
-	return <h1>Hi There!</h1>; // this is JSX element
-}
-
-root.render(<App />);
