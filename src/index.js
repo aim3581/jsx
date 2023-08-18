@@ -1,7 +1,7 @@
 // Import React and ReactDOM lib
 import React from "react"; // what a component is and how multiple comp work together
 import ReactDOM from "react-dom/client"; // how to get a component to show up in the browser
-import Profile from "./Components/Profiles";
+import Profile from "./Components/Profiles/Profiles";
 
 //2 Get a reference to the div with id root
 
