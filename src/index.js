@@ -40,4 +40,18 @@ function InputProps() {
 	); //
 }
 
-root.render(<InputProps />);
+function ApplyStyle() {
+	const inputType = "number";
+	const minValue = 5;
+	const maxValue = 10;
+	return (
+		<input
+			type={inputType}
+			min={minValue}
+			max={maxValue}
+			style={{ border: "2px solid red" }} // style prop expects object mapping to style elements
+		/>
+	); //
+}
+
+root.render(<ApplyStyle />);
