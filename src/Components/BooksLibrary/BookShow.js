@@ -22,7 +22,7 @@ export default function BookShow({ title, id }) {
 	let content = <h3> {title} </h3>;
 
 	if (showEdit) {
-		content = <EditBook onSave={handleOnEditSave} title={title} />;
+		content = <EditBook onSave={handleOnEditSave} oldTitle={title} />;
 	}
 
 	return (

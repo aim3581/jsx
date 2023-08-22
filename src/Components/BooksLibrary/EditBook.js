@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export default function EditBook({ id, title, onSave }) {
-	const [newtitle, setNewTitle] = useState(title);
+export default function EditBook({ oldTitle, onSave }) {
+	const [newtitle, setNewTitle] = useState(oldTitle);
 	function handleOnChange(event) {
 		setNewTitle(event.target.value);
 	}

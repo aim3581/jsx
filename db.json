@@ -13,7 +13,7 @@
       "id": 5
     },
     {
-      "title": "Angular 11",
+      "title": "Angular",
       "id": 6
     },
     {
@@ -23,6 +23,10 @@
     {
       "title": "Golang",
       "id": 8
+    },
+    {
+      "title": "Test",
+      "id": 9
     }
   ]
 }
