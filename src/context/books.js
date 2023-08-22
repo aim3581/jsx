@@ -24,19 +24,18 @@ function BooksProvider({ children }) {
 		setBooks(temp);
 	}
 
+	async function fetchBooksData() {
+		const temp = await fetchBooks();
+		setBooks(temp);
+	}
+
 	const valueToShare = {
 		books,
 		handleOnCreate: create,
 		handleEdit: edit,
 		handleDelete: remove,
+		fetchBooksData,
 	};
-
-	useEffect(() => {
-		(async () => {
-			const temp = await fetchBooks();
-			setBooks(temp);
-		})();
-	}, []);
 
 	return (
 		<BooksContext.Provider value={valueToShare}>
