@@ -1,4 +1,4 @@
-import ImageShow from "./ImageShow";
+import ImageShow from "./imageShow";
 import bird from "../Animals/bird.svg";
 import cat from "../Animals/cat.svg";
 import cow from "../Animals/cow.svg";

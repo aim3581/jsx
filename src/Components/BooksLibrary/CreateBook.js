@@ -1,13 +1,15 @@
-import { useState } from "react";
-export default function ({ onSubmit }) {
+import { useContext, useState } from "react";
+import BooksContext from "../../context/books";
+export default function () {
 	const [title, setTitle] = useState("");
+	const { handleOnCreate } = useContext(BooksContext);
 	function handleOnChange(event) {
 		setTitle(event.target.value);
 	}
 
 	function handleFormSumbit(event) {
 		event.preventDefault();
-		onSubmit(title);
+		handleOnCreate(title);
 		setTitle("");
 	}
 	return (

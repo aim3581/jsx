@@ -1,7 +1,8 @@
 // Import React and ReactDOM lib
 import React from "react"; // what a component is and how multiple comp work together
 import ReactDOM from "react-dom/client"; // how to get a component to show up in the browser
-import Library from "./Components/BooksLibrary/library";
+import { BooksProvider } from "./context/books";
+import Library from "./components/booksLibrary/library";
 
 //2 Get a reference to the div with id root
 
@@ -55,4 +56,8 @@ function ApplyStyle() {
 	); //
 }
 
-root.render(<Library />);
+root.render(
+	<BooksProvider>
+		<Library />
+	</BooksProvider>
+);

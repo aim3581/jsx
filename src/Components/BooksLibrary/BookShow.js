@@ -1,16 +1,21 @@
-import { useState } from "react";
-import EditBook from "./EditBook";
+import { useContext, useState } from "react";
+import EditBook from "./editBook";
+import BooksContext from "../../context/books";
 
-export default function BookShow({ title, id, onDelete, onEdit }) {
+export default function BookShow({ title, id }) {
 	const [showEdit, setShowEdit] = useState(false);
+	const { handleDelete, handleEdit } = useContext(BooksContext);
+
 	function handleOnDeleteClick() {
-		onDelete(id);
+		handleDelete(id);
 	}
+
 	function handleOnEditClick() {
 		setShowEdit(!showEdit);
 	}
+
 	function handleOnEditSave(newTitle) {
-		onEdit(id, newTitle);
+		handleEdit(id, newTitle);
 		setShowEdit(false);
 	}
 

@@ -1,6 +1,6 @@
-import "./Dashboard.css";
-import SearchBar from "./SearchBar";
-import ImageList from "./ImageList";
+import "./dashboard.css";
+import SearchBar from "./searchBar";
+import ImageList from "./imageList";
 import { useState } from "react";
 
 export default function Dashboard() {
