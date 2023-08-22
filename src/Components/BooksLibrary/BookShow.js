@@ -4,7 +4,7 @@ import BooksContext from "../../context/books";
 
 export default function BookShow({ title, id }) {
 	const [showEdit, setShowEdit] = useState(false);
-	const { handleDelete, handleEdit } = useContext(BooksContext);
+	const { handleDelete } = useContext(BooksContext);
 
 	function handleOnDeleteClick() {
 		handleDelete(id);
@@ -15,14 +15,13 @@ export default function BookShow({ title, id }) {
 	}
 
 	function handleOnEditSave(newTitle) {
-		handleEdit(id, newTitle);
 		setShowEdit(false);
 	}
 
 	let content = <h3> {title} </h3>;
 
 	if (showEdit) {
-		content = <EditBook onSave={handleOnEditSave} oldTitle={title} />;
+		content = <EditBook onSave={handleOnEditSave} title={title} id={id} />;
 	}
 
 	return (

@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import BooksContext from "../../context/books";
 
-export default function EditBook({ oldTitle, onSave }) {
-	const [newtitle, setNewTitle] = useState(oldTitle);
+export default function EditBook({ id, title, onSave }) {
+	const [newtitle, setNewTitle] = useState(title);
+	const { handleEdit } = useContext(BooksContext);
 	function handleOnChange(event) {
 		setNewTitle(event.target.value);
 	}
 
 	function handleFormSumbit(event) {
 		event.preventDefault();
+		handleEdit(id, newtitle);
 		onSave(newtitle);
 	}
 	return (

@@ -34,7 +34,6 @@ function BooksProvider({ children }) {
 	useEffect(() => {
 		(async () => {
 			const temp = await fetchBooks();
-			console.log("$$$$$$$$$$$ in books context $$$$$$$$$$");
 			setBooks(temp);
 		})();
 	}, []);
