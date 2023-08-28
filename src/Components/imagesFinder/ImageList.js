@@ -1,10 +1,10 @@
 import ImageShow from "./imageShow";
-import bird from "../Animals/bird.svg";
-import cat from "../Animals/cat.svg";
-import cow from "../Animals/cow.svg";
-import horse from "../Animals/horse.svg";
-import gator from "../Animals/gator.svg";
-import dog from "../Animals/dog.svg";
+import bird from "../animals/bird.svg";
+import cat from "../animals/cat.svg";
+import cow from "../animals/cow.svg";
+import horse from "../animals/horse.svg";
+import gator from "../animals/gator.svg";
+import dog from "../animals/dog.svg";
 const svgMap = {
 	bird,
 	cat,

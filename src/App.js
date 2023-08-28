@@ -1,15 +1,33 @@
 //create a component
 
-function App() {
-	let message = "Hi "; // uncaught Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
-	let name = "Rahul";
-	return (
-		<h1>
-			{message}
-			{name}
-		</h1>
-	); // this is JSX element, curly braces means we are about to add expression
-}
+import Dashboard from "./components/imagesFinder/dashboard";
+import Animal from "./components/animals/animal";
+import LibraryApp from "./components/booksLibrary/libraryApp";
+import Route from "./route";
+import Profile from "./components/profiles/profiles";
+import SideBar from "./components/sidebar/SideBar";
 
-//export default statement
-export default App;
+export default function App() {
+	return (
+		<div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
+			<SideBar />
+			<div className="col-span-5">
+				<Route path="/">
+					<LibraryApp />
+				</Route>
+				<Route path="/library">
+					<LibraryApp />
+				</Route>
+				<Route path="/imageFinder">
+					<Dashboard />
+				</Route>
+				<Route path="/animals">
+					<Animal />
+				</Route>
+				<Route path="/profiles">
+					<Profile />
+				</Route>
+			</div>
+		</div>
+	);
+}

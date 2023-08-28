@@ -1,7 +1,7 @@
 //import lib if required
 
 import "bulma/css/bulma.css";
-import Assistant from "./Assistant";
+import Assistant from "./assistant";
 import AlexaImage from "./alexa.png";
 import siriImage from "./siri.png";
 import cortanaImage from "./cortana.png";
